@@ -1,0 +1,73 @@
+:root{
+    --background: #EEEEEE;
+    --darkBlue: #13293d;
+    --mainBlue: #006494;
+    --accentBlue: #247ba0;
+    --lightBlue: #1b98e0; 
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    margin: 0;
+}
+
+nav{
+    background-color: var(--darkBlue);
+    height: 5em;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav h1{
+    margin: 0 1em;
+    width: 20vw;
+    color: var(--background);
+}
+
+nav div{
+    margin-right: 3em;
+}
+
+nav button{
+    border: none;
+    color: var(--background);
+    background: none;
+    margin-right: 1.5em;
+}
+
+nav button:hover{
+    color: var(--accentBlue);
+}
+
+#map {
+    height: 30vw;
+    width: 100%;
+}
+#pano{
+    height: 30vw;
+    width: 100%;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+}
+
+table{
+    margin: 2em;
+}
+
+table th{
+    padding: 0 3em;
+}
+
+table tr:first-child{
+    background-color: var(--accentBlue);
+}
+
+table td{
+    padding: auto;    
+}

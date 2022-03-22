@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Csv Maken</title>
+
+    <link rel="stylesheet" href="style/stylesheet.css">
+
+    <script src="https://kit.fontawesome.com/029fbe61d5.js" crossorigin="anonymous"></script>
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAwBGd5NDHoLJYvZ-esVEMh9L_guIgNjM&callback=initMap"></script>
+
+</head>
+<body>
+    <nav>
+        <h1>Csv Maken</h1>
+        <div>
+            <button id="selectFile"><i class="fa-solid fa-folder"></i></button>
+            <!-- stores link for file -->
+            <input id="file-input" accept=".csv" type="file" style="display: none;" /> 
+            <button id="procces"><i class="fa-solid fa-gears"></i></button>
+            <button id="placeMarker"><i class="fa-solid fa-location-dot"></i></button>
+            <button id="undo" class="btn btn-default"><i class="fa-solid fa-rotate-left"></i></button>
+            <button id="reset"><i class="fa-solid fa-trash-can"></i></button>
+            <button id="csv"><i class="fa-solid fa-file-arrow-down"></i></button>
+        </div>         
+    </nav>
+
+    <section>
+        <div id="map"></div>
+        <div id="pano"></div>
+    </section>
+
+    <section>
+        <table id="coords">
+            <tr>
+                <th>Nr.</th>
+                <th>Latitude</th>
+                <th>Longtitude</th>
+                <th>direction</th>
+                <th>point type</th>
+            </tr>
+        </table>
+    </section>
+
+    <script src="app.js" type="text/javascript"></script>
+</body>
+</html>
