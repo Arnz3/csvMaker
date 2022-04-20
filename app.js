@@ -231,7 +231,7 @@ function addMarker(map, latLng, inputData="", selected=0){
         let index = deleteButtons.indexOf(deleteButton);
         markers[index].setMap(null);
         markers.splice(index, 1);
-        table.deleteRow(index);
+        table.deleteRow(index+1);
         deleteButtons.splice(index,1);
     });
 
@@ -256,20 +256,6 @@ function csvToArray(str, delimiter = ",") {
         arr.push(row.split(delimiter));
     });
     
-    // Map the rows
-    // split values from each row into an array
-    // use headers.reduce to create an object
-    // object properties derived from headers:values
-    // the object passed as an element of the array
-    // const arr = rows.map(function (row) {
-    //     const values = row.split(delimiter);
-    //     const el = headers.reduce(function (object, header, index) {
-    //     object[header] = values[index];
-    //     return object;
-    //     }, {});
-    //     return el;
-    // });
-
     // return the array
     return arr;
 }
