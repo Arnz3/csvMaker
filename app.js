@@ -12,6 +12,8 @@ var processButton = document.getElementById("procces");
 
 var CSVdata = "lat, lon, direction, pointcode\n";
 
+var count = 0;
+
 lang="EN"
 
 const dict = {
@@ -182,17 +184,19 @@ function processSVData({ data }) {
 }
 
 function addMarker(map, latLng, inputData="", selected=0){
+    //keep track of the number of markers
+    count += 1;
     //place marker on map
     var m = new google.maps.Marker({
         position: latLng,
         map: map,
         draggable: true,
-        label : String(markers.length+1),
+        label : String(count),
     });
     markers.push(m);
     // place marker info in table
     var row = table.insertRow();
-    row.insertCell().innerHTML = String(markers.length);
+    row.insertCell().innerHTML = String(count);
     row.insertCell().innerHTML = markers[markers.length-1].position.lat();
     row.insertCell().innerHTML = markers[markers.length-1].position.lng();
     var input = document.createElement("input");
